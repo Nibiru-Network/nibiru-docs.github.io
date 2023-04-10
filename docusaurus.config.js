@@ -21,7 +21,7 @@ const config = {
   organizationName: 'Nibiru-Network', // Usually your GitHub org/user name.
   projectName: 'Documentation', // Usually your repo name.
 
-  onBrokenLinks: 'ignore',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
