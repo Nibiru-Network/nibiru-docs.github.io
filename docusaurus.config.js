@@ -21,7 +21,7 @@ const config = {
   organizationName: 'Nibiru-Network', // Usually your GitHub org/user name.
   projectName: 'Documentation', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -62,14 +62,14 @@ const config = {
         title: 'Nibiru Network',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/nibiru-network-logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
           {
