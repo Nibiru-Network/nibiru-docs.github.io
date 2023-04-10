@@ -43,7 +43,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Nibiru-Network/nibiru-docs.github.io/tree/main',
         },
         blog: false,
         theme: {
@@ -73,7 +73,7 @@ const config = {
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Nibiru-Network/nibiru-docs.github.io',
             label: 'GitHub',
             position: 'right',
           },
@@ -86,7 +86,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Introduction',
                 to: '/docs/intro',
               },
             ],
@@ -114,6 +114,10 @@ const config = {
               {
                 label: 'Nibiruscan Block Explorer',
                 href: 'https://www.nibiruscan.io',
+              },
+              {
+                label: 'Whitepaper',
+                href: 'https://nibirunet.io/wp-content/uploads/2023/04/Nibiru_Whitepaper_V2.1.pdf',
               },
             ],
           },
