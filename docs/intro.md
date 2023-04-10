@@ -2,7 +2,7 @@
 sidebar_position: 1
 slug: /
 ---
-# Get started with the Nibiru Network
+# Getting startarted with Nibiru
 ---
 
 [Nibiru](https://www.nibirunet.io) is a decentralized storage network designed to store,
