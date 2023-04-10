@@ -61,8 +61,8 @@ const config = {
       navbar: {
         title: 'Nibiru Network',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/nibiru-network-logo.svg',
+          alt: 'Nibiru Network Logo',
+          src: 'img/logo.svg',
         },
         items: [
           {
