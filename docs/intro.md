@@ -5,50 +5,28 @@ slug: /
 # Getting started with Nibiru
 ---
 
-[Nibiru](https://www.nibirunet.io) is a decentralized storage network designed to store,
-back-up and share your data, securely and privately.  Additionally, you can offer your surplus
-storage capacity on your computer to other members of the network while earning rewards (NBN)
-for doing so. 
+[Nibiru Network](https://www.nibirunet.io) is a decentralized storage, bandwidth and compute blockchain network
+that is designed to allow anyone to participate in a permissionless manner.  Anyone who has surplus storage, newtorking bandwidth and/or compute resources, can easily become a part of the Nibiru ecosystem.
 
 There are 3 ways to participate in the Nibiru ecosystem:
 
-* Become a Validator on Nibiru's Proof-of-Stake network
-* Share your surplus storage on the Nibiru network and earn rewards
-* Rent storage from others on the Nibiru network
-
-## Become a Validator on Nibiru
-If you are familiar with mining on other networks, such as Ethereum, then becoming an **Nibiru Validator**
-will likely be a similar experience.  However, if you have not previously set up a Validator
-on other Proof-of-Stake networks, beware that it can be a complicated process.
-
-To become a Validator on the Nibiru network, head over to 
-[Become a Validator](become-a-validator/get-started-validator.md) to get started!
-
-## Sharing storage on Nibiru
-Sharing your computer's surplus storage on the Nibiru network makes your
-computer a **Storage Provider**, and mining node on the network. By providing storage on the Nibiru
-network, you not only help decentralize the world's data, you earn rewards that you can use for applications
-on the network - such as renting other's storage to take a defense-in-depth approach to backing-up your data.
-
-To become an Nibiru Storage Provider, head over to
-[Become a Storage Provider](become-a-storage-provider/get-started-storage-provider.md)
-to get started!
-
-## Rent storage from other Storage Providers on Nibiru
-If you don't have surplus storage to share on the Nibiru network, or setting-up a Validator is a bit too
-daunting, don't worry.  You can still participate in Nibiru by renting storage from other Storage Providers on
-the network.  
-
-To rent storage, head over to [Rent Storage Space](rent-storage-space/get-started-renting.md) to get started!
-
-## More Resources
-
-In addition to our documentation, check out our other resources to help you learn more about
-Nibiru and connect with other NBN'ers!
-
-* Join us on [**Telegram**](https://t.me/NibiruOfficial)
-* Follow us on [**Twitter**](https://twitter.com/Nibiru)
-* Join our community on [**Zealy**](https://zealy.io/c/Nibiru/questboard) and complete quests to earn rewards!
-* Read the [**Whitepaper**](https://Nibiru.io/wp-content/uploads/2023/03/Nibiru-Whitepaper-1.5.1-03072023.pdf)
+* **Share** your extra compute, storage and network bandwidth resources to bring the vision of a truly decentralized cloud to reality.
+* **Earn** rewards by staking in multiple ways or contributing your extra computing resources to the network.
+* **Build** using your existing Solidity skills to build new, or migrate existing Dapps to the EVM-compatible Nibiru Network.
 
 
+
+## Share
+Rarely do we fully utilize the storage space, bandwidth and compute resources that our computers have.  With the Nibiru Network's unique Proof of Flow (PoF) and Proof of Capacity (PoC) layer 2 consensus mechanisms, you can turn those spare resources into rentable resources.
+
+## Earn
+When sharing your surplus computing resources, you are rewarded in two ways:
+1. Through PoF adn PoC consensus rewards
+2. Through participants of the network renting your surplus resources for thier personal or business needs.
+
+## Build
+As an EVM-compatible network, developers familiar with Ethereum development languages and tool chains can focus on developing new, or migrating existing, Dapps for the Nibiru Network rather than learning new skills.  
+
+## More coming soon!
+
+While the Nibiru Network is [live](https://www.nibiruscan.io) today, we're currently focusing on encouraging the community on-board to the network through deploying a validator node on the network.  Later this year, network participants will be able to **Share** and **Earn**.  If you're ready to help **Build** the Nibiru network and earning MPoS NBN rewards, continue on to the [**Next Step**](become-a-validator/get-started-validator.md) and deploy a validator.
