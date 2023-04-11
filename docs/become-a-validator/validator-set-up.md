@@ -70,7 +70,7 @@ locale-gen -en_US:en
 ```bash
 # mkdir -p /data/devent
 # cd /data/devent
-# git clone --recurse （this process is not needed）
+# git clone https://github.com/Nibiru-Network/Nibiru --recurse （this process is not needed）
 # cd nibiru
 # make all
 ```
