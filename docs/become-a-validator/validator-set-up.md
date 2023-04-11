@@ -24,19 +24,19 @@ Instructions for configuring a Validator Node on the Nibiru Network.
 * Default path: `/data/nibiru`
 * Mining file storage directory: `/data/nibiru/data/keystore`
 
-## 1.  Udpate System Environment
+## 1. Update System Environment
 
 **Time Syncronization**
 
 ```bash
-# yum udpate -y
+# yum update -y
 # yum upgrade -y
 ```
 
 **Deploy time synchronization**
 
 ```bash
-# yum -y instal chrony
+# yum -y install chrony
 ```
 
 **Start time synchronization**
@@ -53,7 +53,7 @@ Instructions for configuring a Validator Node on the Nibiru Network.
 
 ![Alt text](check_time_synchronization.png)
 
-**Udpate System Language**
+**Update System Language**
 
 ```bash
 # sudo vim /etc/default/locale
@@ -70,7 +70,7 @@ locale-gen -en_US:en
 ```bash
 # mkdir -p /data/devent
 # cd /data/devent
-# git clone --recurse （this process is not needed）
+# git clone https://github.com/Nibiru-Network/Nibiru --recurse （this process is not needed）
 # cd nibiru
 # make all
 ```
