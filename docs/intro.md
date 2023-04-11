@@ -29,4 +29,4 @@ As an EVM-compatible network, developers familiar with Ethereum development lang
 
 ## More coming soon!
 
-While the Nibiru Network is [live](https://www.nibiruscan.io) today, we're currently focusing on encouraging the community on-board to the network through deploying a validator node on the network.  Later this year, network participants will be able to **Share** and **Earn**.  If you're ready to help **Build** the Nibiru network and earning MPoS NBN rewards, continue on to the [**Next Step**](become-a-validator/get-started-validator.md) and deploy a validator.
+While the Nibiru Network is [live](https://www.nibiruscan.io) today, we're currently focusing on encouraging the community on-board to the network through deploying a validator node.  Later this year, network participants will be able to **Share** and **Earn**.  If you're ready to help **Build** the Nibiru network and earning MPoS NBN rewards, continue on to the [**Next Step**](become-a-validator/get-started-validator.md) and deploy a validator.
