@@ -17,38 +17,44 @@ Instructions for configuring a Validator Node on the Nibiru Network.
 | Disk (Data)    | 2TB                  |
 | Network        | Internet connection  |
 
-## Directory Structures
+## Directory Structure
 
 * Program directory: `/data/nibiru/bin`
 * Data directory: `/data/nibiru/data`
 * Default path: `/data/nibiru`
 * Mining file storage directory: `/data/nibiru/data/keystore`
 
-## 1. Update System Environment
+## 1. Setup System Environment
 
-**Time Syncronization**
+**Update and upgrade system**
+
+This ensures the system and packages are on the latest versions.
 
 ```bash
-# yum update -y
-# yum upgrade -y
+yum update -y && yum upgrade -y
 ```
 
-**Deploy time synchronization**
+**Install time synchronization**
+
+`chrony` is a versatile implementation of the Network Time Protocol (NTP). It can synchronise 
+the system clock with NTP servers, reference clocks (e.g. GPS receiver), and manual input using 
+wristwatch and keyboard. It can also operate as an NTPv4 (RFC 5905) server and peer to provide 
+a time service to other computers in the network.
 
 ```bash
-# yum -y install chrony
+yum -y install chrony
 ```
 
 **Start time synchronization**
 
 ```bash
-# systemctl start chronyd
+systemctl start chronyd
 ```
 
 **Check time syncronization status**
 
 ```bash
-# systemctl status chronyd
+systemctl status chronyd
 ```
 
 ![Alt text](check_time_synchronization.png)
@@ -56,7 +62,7 @@ Instructions for configuring a Validator Node on the Nibiru Network.
 **Update System Language**
 
 ```bash
-# sudo vim /etc/default/locale
+sudo vim /etc/default/locale
 ```
 
 ```
@@ -68,11 +74,11 @@ locale-gen -en_US:en
 ## 2 - Compile the Node Program
 
 ```bash
-# mkdir -p /data/devent
-# cd /data/devent
-# git clone https://github.com/Nibiru-Network/Nibiru --recurse （this process is not needed）
-# cd nibiru
-# make all
+mkdir -p /data/devent
+cd /data/devent
+git clone https://github.com/Nibiru-Network/Nibiru --recurse （this process is not needed）
+cd nibiru
+make all
 ```
 
 ## 3 - Deploy the Node
@@ -80,20 +86,20 @@ locale-gen -en_US:en
 Create the working directory
 
 ```bash
-# mkdir -p /data/nibiru/data
+mkdir -p /data/nibiru/data
 ```
 
 Copy the compiled node program to the working directory
 
 ```bash
-# cp -r /data/devent/nibiru/build/bin /data/nibiru/
+cp -r /data/devent/nibiru/build/bin /data/nibiru/
 ```
 
 Generate the miner address keystore file in the `/data/nibiru/data/keystore` directory
 
 ```bash
-# cd /data/nibiru
-# ./bin/nbn --datadir data/ account new
+cd /data/nibiru
+./bin/nbn --datadir data/ account new
 ```
 
 ![Alt text](keypassword.png)
@@ -103,7 +109,7 @@ Generate the miner address keystore file in the `/data/nibiru/data/keystore` dir
 Write the password for the key file to the `/data/nibiru/data/password.txt` file.
 
 ```bash
-# echo 'keypassword' > /data/nibiru/data/password.txt
+echo 'keypassword' > /data/nibiru/data/password.txt
 ```
 
 ## 4 - Create the Nibiru Startup Service
@@ -170,19 +176,19 @@ Write the password for the key file to the `/data/nibiru/data/password.txt` file
 Create a self-starting node service
 
 ```bash
-# systemctl enable nbnchain
+systemctl enable nbnchain
 ```
 
 Start the node service
 
 ```bash
-# systemctl start nbnchain
+systemctl start nbnchain
 ```
 
 Query the service running status
 
 ```bash
-# systemctl status nbnchain
+systemctl status nbnchain
 ```
 
 ## 6 - Console Check
@@ -190,7 +196,7 @@ Query the service running status
 Enter the console
 
 ```bash
-# ./bin/nbn attach data/nbn.ipc
+./bin/nbn attach data/nbn.ipc
 ```
 
 Check the sync status

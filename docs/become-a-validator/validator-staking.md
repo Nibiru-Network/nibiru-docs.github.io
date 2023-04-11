@@ -5,15 +5,21 @@ sidebar_position: 2
 Stake NBN in your validator
 ---
 
-Once you have the validator node set up complete, you must stake an initial pledge of 100 NBN into your validator in order for it to become a candidate for block production.  The process for selection of Validator Nodes to become "active" is dependent on several factors, including penalty scores as well as the amount of NBN staked into the 
-validator.  The more you stake, the higher probability of being elected as an active validator to generate blocks and earn PoS block generation rewards.
+Once you have the validator node set up complete, you must stake an initial pledge of 100 NBN 
+into your validator in order for it to become a candidate for block production.  The process 
+for selection of Validator Nodes to become "active" is dependent on several factors, including 
+penalty scores as well as the amount of NBN staked into the validator. The more you stake, 
+the higher probability of being elected as an active validator to generate blocks and earn 
+PoS block generation rewards.
 
 For details on how validator nodes are selected to be active, see the
 [whitepaper](https://nibirunet.io/wp-content/uploads/2023/04/Nibiru_Whitepaper_V2.1.pdf).
 
 :::important Qualify to get NBN for staking!
 
-We haven't launched the NBN token yet on exchanges.  The first 100 validators to join the Nibiru network will have thier staking fees will be covered by us.  For more information, join our [**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram.
+We haven't launched the NBN token yet on exchanges. The first 100 validators to join the Nibiru 
+network will have their staking fees covered by us. For more information, join our 
+[**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram.
 
 :::
 
@@ -21,7 +27,7 @@ We haven't launched the NBN token yet on exchanges.  The first 100 validators to
 
 ### 1 - Configure Metamask for Nibiru
 
-If you haven't already, install the [Metamask](https://metamask.io/download/) wallet and create an account.
+If you haven't already, install the [Metamask wallet](https://metamask.io/download/) and create an account.
 
 Once Metamask has been installed, you will need to connect it to the Nibiru Network doing the following:
 
@@ -38,7 +44,7 @@ Enter the following Nibiru Network details:
 
 * **Network name** - `Nibiru Network`
 * **New RPC URL** - `https://rpc.nibiruscan.io`
-* **CHain ID** - `16777`
+* **Chain ID** - `16777`
 * **Currency symbol** - `NBN`
 * **Block explorer URL** - `https://www.nibiruscan.io/`
 
