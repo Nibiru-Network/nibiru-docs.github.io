@@ -36,7 +36,7 @@ Instructions for configuring a Validator Node on the Nibiru Network.
 **Deploy time synchronization**
 
 ```bash
-# yum -y instal chrony
+# yum -y install chrony
 ```
 
 **Start time synchronization**
