@@ -11,11 +11,10 @@ liquidity is staked into the nodes in the form of NBN, which can be slashed in t
 node does not perform its intended function.  Validator nodes that perform properly are compensated 
 for their service in NBN.
 
-## Modified Proof of Stake
-The Nibiru Network employs a Modified Proof of Stake (MPoS) consensus mechanism that improves upon 
-the the original design of PoS in many blockchain networks today.  MPoS is a layer one consensus 
-used in Nibiru Network that is based on the original Proof of Stake (PoS) consensus algorithm, 
-but with modifications to address certain issues or limitations.
+## Multi Proof of Stake
+Multi Proof of Stake (MPoS) is a layer one consensus algorithm used in Nibiru Network
+that is based on the original Proof of Stake (PoS) consensus algorithm, but with
+modifications to address certain issues or limitations.
 
 It presets two pools of candidate nodes with different proportions of candidates (upper and lower 
 house system). In each round of witness node election, a corresponding number of nodes are selected 
