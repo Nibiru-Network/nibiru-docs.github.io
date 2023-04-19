@@ -76,9 +76,9 @@ locale-gen -en_US:en
 ```bash
 mkdir -p /data/devent
 cd /data/devent
-git clone https://github.com/Nibiru-Network/Nibiru --recurse （this process is not needed）
-cd nibiru
-make all
+git clone https://github.com/Nibiru-Network/Nibiru.git 
+cd Nibiru
+make nbn (or make all)
 ```
 
 ## 3 - Deploy the Node
@@ -92,7 +92,7 @@ mkdir -p /data/nibiru/data
 Copy the compiled node program to the working directory
 
 ```bash
-cp -r /data/devent/nibiru/build/bin /data/nibiru/
+cp -r /data/devent/Nibiru/build/bin /data/nibiru/
 ```
 
 Generate the miner address keystore file in the `/data/nibiru/data/keystore` directory
