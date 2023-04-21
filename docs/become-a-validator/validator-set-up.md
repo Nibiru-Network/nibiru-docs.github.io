@@ -4,7 +4,8 @@ sidebar_position: 1
 
 # Validator Node Configuration
 
-Instructions for configuring a Validator Node on the Nibiru Network.
+Instructions for configuring a Validator Node on the Nibiru Network. This setup assumes you're
+logged in as `root`.
 
 ## Hardware Requirements
 
@@ -122,25 +123,25 @@ echo 'keypassword' > /data/nibiru/data/password.txt
    
    ```
    [Unit]
-    Description=Ethereum Nibiru Chain
-    After=network.target
-    
-    [Service]
-    Type=simple
-    StandardOutput=syslog
-    StandardError=syslog
-    SyslogIdentifier=nibiru
-    User=root
-    WorkingDirectory=/data/nibiru
-    ExecStart=/data/nibiru/bin/nbn --datadir /data/nibiru/data
-    KillMode=process
-    TimeoutStopSec=60
-    Restart=on-failure
-    RestartSec=5
-    RemainAfterExit=no
-    
-    [Install]
-    WantedBy=multi-user.target
+   Description=Ethereum Nibiru Chain
+   After=network.target
+
+   [Service]
+   Type=simple
+   StandardOutput=syslog
+   StandardError=syslog
+   SyslogIdentifier=nibiru
+   User=root
+   WorkingDirectory=/data/nibiru
+   ExecStart=/data/nibiru/bin/nbn --datadir /data/nibiru/data
+   KillMode=process
+   TimeoutStopSec=60
+   Restart=on-failure
+   RestartSec=5
+   RemainAfterExit=no
+
+   [Install]
+   WantedBy=multi-user.target
    ```
 
 2. Stop synchronous node mining
@@ -150,25 +151,25 @@ echo 'keypassword' > /data/nibiru/data/password.txt
 
    ```
    [Unit]
-    Description=Ethereum Nibiru chain
-    After=network.target
-    
-    [Service]
-    Type=simple
-    StandardOutput=syslog
-    StandardError=syslog
-    SyslogIdentifier=nibiru
-    User=root
-    WorkingDirectory=/data/nibiru
-    ExecStart=/data/nibiru/bin/nbn --datadir /data/nibiru/data --allow-insecure-unlock  -unlock ‘Miner address’ --password /data/nibiru/data/password.txt --mine 
-    KillMode=process
-    TimeoutStopSec=60
-    Restart=on-failure
-    RestartSec=5
-    RemainAfterExit=no
-    
-    [Install]
-    WantedBy=multi-user.target
+   Description=Ethereum Nibiru chain
+   After=network.target
+
+   [Service]
+   Type=simple
+   StandardOutput=syslog
+   StandardError=syslog
+   SyslogIdentifier=nibiru
+   User=root
+   WorkingDirectory=/data/nibiru
+   ExecStart=/data/nibiru/bin/nbn --datadir /data/nibiru/data --allow-insecure-unlock  -unlock ‘Miner address’ --password /data/nibiru/data/password.txt --mine 
+   KillMode=process
+   TimeoutStopSec=60
+   Restart=on-failure
+   RestartSec=5
+   RemainAfterExit=no
+
+   [Install]
+   WantedBy=multi-user.target
    ```
 
 ## 5 - Start Nibiru Services
