@@ -27,16 +27,13 @@ logged in as `root`.
 
 ## 1. Setup System Environment
 
-**Update and upgrade system**
-
+#### a. Update and upgrade system
 This ensures the system and packages are on the latest versions.
-
 ```bash
 yum update -y && yum upgrade -y
 ```
 
-**Install time synchronization**
-
+#### b. Install time synchronization
 `chrony` is a versatile implementation of the Network Time Protocol (NTP). It can synchronise 
 the system clock with NTP servers, reference clocks (e.g. GPS receiver), and manual input using 
 wristwatch and keyboard. It can also operate as an NTPv4 (RFC 5905) server and peer to provide 
@@ -46,21 +43,19 @@ a time service to other computers in the network.
 yum -y install chrony
 ```
 
-**Start time synchronization**
-
+#### c. Start time synchronization
 ```bash
 systemctl start chronyd
 ```
 
-**Check time syncronization status**
-
+#### d. Check time syncronization status
 ```bash
 systemctl status chronyd
 ```
 
 ![Alt text](check_time_synchronization.png)
 
-**Update System Language**
+#### e. Update System Language
 
 ```bash
 sudo vim /etc/default/locale
@@ -72,7 +67,7 @@ LANGUAGE="en_US:en"
 locale-gen -en_US:en
 ```
 
-## 2 - Compile the Node Program
+## 2 - Compile the Nibiru daemon
 
 ```bash
 mkdir -p /data/devent
@@ -82,22 +77,19 @@ cd Nibiru
 make nbn (or make all)
 ```
 
-## 3 - Deploy the Node
+## 3 - Setup the Nibiru working directory
 
-Create the working directory
-
+#### a. Create the working directory
 ```bash
 mkdir -p /data/nibiru/data
 ```
 
-Copy the compiled node program to the working directory
-
+#### b. Copy the compiled Nibiru daemon to the working directory
 ```bash
 cp -r /data/devent/Nibiru/build/bin /data/nibiru/
 ```
 
-Generate the miner address keystore file in the `/data/nibiru/data/keystore` directory
-
+#### c. Generate the miner address keystore file in the `/data/nibiru/data/keystore` directory
 ```bash
 cd /data/nibiru
 ./bin/nbn --datadir data/ account new
@@ -107,105 +99,127 @@ cd /data/nibiru
 
 **Make sure to generate your own password instead of `keypassword` and don't forget it!**
 
-Write the password for the key file to the `/data/nibiru/data/password.txt` file.
+#### d. Write the password for the key file to the `/data/nibiru/data/password.txt` file.
 
 ```bash
 echo 'keypassword' > /data/nibiru/data/password.txt
 ```
 
-## 4 - Create the Nibiru Startup Service
+## 4 - Begin syncing to Nibiru Network
+Now that the keys have been created and the directory structure set,
+it's time to synchronize the node with the network.
 
-1. Start synchronous node mining
-   
-   ```bash
-   # vim /lib/systemd/system/nbnchain.service
-   ```
-   
-   ```
-   [Unit]
-   Description=Ethereum Nibiru Chain
-   After=network.target
+#### a. Create nbnchain.service file
+This service file will synchronize your node with the network. 
 
-   [Service]
-   Type=simple
-   StandardOutput=syslog
-   StandardError=syslog
-   SyslogIdentifier=nibiru
-   User=root
-   WorkingDirectory=/data/nibiru
-   ExecStart=/data/nibiru/bin/nbn --datadir /data/nibiru/data
-   KillMode=process
-   TimeoutStopSec=60
-   Restart=on-failure
-   RestartSec=5
-   RemainAfterExit=no
+```bash
+sudo cat <<EOF >> /lib/systemd/system/nbnchain.service
+[Unit]
+Description=Ethereum Nibiru Chain
+After=network.target
 
-   [Install]
-   WantedBy=multi-user.target
-   ```
+[Service]
+Type=simple
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nibiru
+User=root
+WorkingDirectory=/data/nibiru
+ExecStart=/data/nibiru/bin/nbn --datadir /data/nibiru/data
+KillMode=process
+TimeoutStopSec=60
+Restart=on-failure
+RestartSec=5
+RemainAfterExit=no
 
-2. Stop synchronous node mining
-   ```bash
-   # vim /lib/systemd/system/nbnchain.service
-   ```
+[Install]
+WantedBy=multi-user.target
+EOF
+```
 
-   ```
-   [Unit]
-   Description=Ethereum Nibiru chain
-   After=network.target
+#### b. Start Nibiru service
 
-   [Service]
-   Type=simple
-   StandardOutput=syslog
-   StandardError=syslog
-   SyslogIdentifier=nibiru
-   User=root
-   WorkingDirectory=/data/nibiru
-   ExecStart=/data/nibiru/bin/nbn --datadir /data/nibiru/data --allow-insecure-unlock  -unlock ‘Miner address’ --password /data/nibiru/data/password.txt --mine 
-   KillMode=process
-   TimeoutStopSec=60
-   Restart=on-failure
-   RestartSec=5
-   RemainAfterExit=no
-
-   [Install]
-   WantedBy=multi-user.target
-   ```
-
-## 5 - Start Nibiru Services
-
-Create a self-starting node service
-
+1. Create a self-starting node service
 ```bash
 systemctl enable nbnchain
 ```
 
-Start the node service
-
+2. Start the node service
 ```bash
 systemctl start nbnchain
 ```
 
-Query the service running status
-
+To query the service to ensure it is running correctly,
+you may run the following command:
 ```bash
 systemctl status nbnchain
 ```
 
-## 6 - Console Check
+### c. Check if node is synchronizing
 
-Enter the console
-
+1. Enter the console
 ```bash
+cd /data/nibiru/
 ./bin/nbn attach data/nbn.ipc
 ```
 
-Check the sync status
-
-```
+2. Check the sync status
+```bash
 > eth.syncing
 ```
 
 `True` = Synchronization still in progress
 
 `False` = Synchronization is complete
+
+Once the node is synced with the network, you can continue on to step 5.
+
+## 5 - Update systemd daemon to be a validator
+Now that the node is synced, you may turn it into a validator. The first step
+is to update the service file so that it may sign blocks. Currently it has no
+access to the keys you created before, so we'll need to fix that. The only
+line that needs modified is the `ExecStart` row.
+
+#### a. Modify the nbnchain.service file
+```bash
+sudo vim /lib/systemd/system/nbnchain.service
+```
+
+```ini
+[Unit]
+Description=Ethereum Nibiru chain
+After=network.target
+
+[Service]
+Type=simple
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nibiru
+User=root
+WorkingDirectory=/data/nibiru
+ExecStart=/data/nibiru/bin/nbn --datadir /data/nibiru/data --allow-insecure-unlock  -unlock 'MINER_ADDRESS_HERE' --password /data/nibiru/data/password.txt --mine 
+KillMode=process
+TimeoutStopSec=60
+Restart=on-failure
+RestartSec=5
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
+```
+
+#### b. Reload the daemon
+This informs the operating system that a change has been made in the
+service file.
+
+```bash
+sudo systemctl daemon-reload
+```
+
+#### c. Restart the nbnchain service
+```bash
+sudo systemctl restart nbnchain
+```
+
+Now that your node is synced and the service file is set up to be a validator on Nibiru Network,
+you may now continue and [**stake to your validator**](validator-staking.md).
