@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Nibiru-Network', // Usually your GitHub org/user name.
-  // projectName: 'Documentation', // Usually your repo name.
+  projectName: 'documentation', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
