@@ -59,12 +59,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/nibiru_logo.svg',
       navbar: {
         title: 'Nibiru Network',
         logo: {
           alt: 'Nibiru Network Logo',
-          src: 'img/logo.svg',
+          src: 'img/nibiru_logo.svg',
         },
         items: [
           {
