@@ -104,6 +104,10 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/nibiru_network',
               },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/nibiru-network',
+              },
             ],
           },
           {
@@ -119,12 +123,12 @@ const config = {
               },
               {
                 label: 'Whitepaper',
-                href: 'https://nibirunet.io/wp-content/uploads/2023/04/Nibiru_Whitepaper_V2.1.pdf',
+                href: 'https://nibiruweb.cdn.prismic.io/nibiruweb/fadc4fd8-c819-4987-aa6e-40edd6ae5b0c_Nibiru-Network-Whitepaper-1.0.pdf',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Nibiru Network`,
+        copyright: `Copyright © ${new Date().getFullYear()} Nibiru Network Trust`,
       },
       prism: {
         theme: lightCodeTheme,
