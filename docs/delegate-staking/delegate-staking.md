@@ -9,18 +9,20 @@ Validators on the Nibiru Network earn MPoS rewards for block generation on the b
 are based partially on the amount of NBN the validator has staked.  The more staked, the higher
 the MPoS rewards.
 
-The operator of a validator node is responsible for staking the minimum amount of NBN (100) when
-initially setting-up thier validator node, but can increase the staked amount over time.
-Additionally, holders of NBN can also stake thier tokens into existing validators, sharing the
+The operator of a validator node is responsible for staking the minimum amount of 100 NBN tokens 
+when initially setting-up their validator node, but can increase the staked amount over time.
+Additionally, holders of NBN can also stake their tokens into existing validators, sharing the
 MPoS rewards for the node.  This is called "delegate staking", and not only offers an opportunity
 for anyone with NBN to share in MPoS rewards, by also further secures the Nibiru Network by
-increasing the amount of liquidity in total staked into the network.
+increasing the amount of liquidity staked into the network.
+
+Visit the [**Nibiru Network website**](https://www.nibirunet.io/staking) to learn more about staking.
 
 :::important Qualify to get NBN for delegate staking!
 
-We haven't launched the NBN token yet on exchanges. Join 
-[**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram for opporunities to qualify for
-NBN airdrops and details on exchange listing.
+The NBN token has not yet been listed on exchanges. Join 
+[**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram for opportunities to qualify for
+NBN airdrops and details on future exchange listings.
 
 :::
 
@@ -39,7 +41,7 @@ Open [**Nibiruscan**](https://www.Nibiruscan.io/) in a web browser that supports
 ![Select validator screen](nibiruscan_validators.png)
 
 Scroll down to the **Validators List** to see the validators currently in the Nibiru Network.
-By default, active validators are shown in the **Validators** tab while those waiting for thier
+By default, active validators are shown in the **Validators** tab while those waiting for their
 turn to be an active validator are shown in the **Candidates** tab.  Choosing a validator in
 either is fine, however it's important to choose a validator based on the following criteria:
 
