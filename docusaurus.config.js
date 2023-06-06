@@ -123,7 +123,7 @@ const config = {
               },
               {
                 label: 'Whitepaper',
-                href: 'https://nibiruweb.cdn.prismic.io/nibiruweb/fadc4fd8-c819-4987-aa6e-40edd6ae5b0c_Nibiru-Network-Whitepaper-1.0.pdf',
+                href: 'https://www.nibirunet.io/whitepaper',
               },
             ],
           },

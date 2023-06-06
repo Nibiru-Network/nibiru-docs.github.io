@@ -23,7 +23,7 @@ and at the same time combined with the benefit algorithm to ensure that each par
 the opportunity to produce a block.
 
 For further information on MPoS and its benefits, see the 
-[whitepaper](https://nibirunet.io/wp-content/uploads/2023/04/Nibiru_Whitepaper_V2.1.pdf).
+[whitepaper](https://www.nibirunet.io/whitepaper#3.5-features-of-the-mpos-consensus-mechanism).
 
 :::warning warning
 
