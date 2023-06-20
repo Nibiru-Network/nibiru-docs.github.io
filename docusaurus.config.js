@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Nibiru Network Documentation',
   tagline: 'Learn how to use the Nibiru Network',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-32x32.ico',
 
   // Set the production url of your site here
   url: 'https://nibiru-docs.github.io',
