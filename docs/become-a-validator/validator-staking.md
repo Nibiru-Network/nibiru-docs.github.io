@@ -15,11 +15,11 @@ PoS block generation rewards.
 For details on how validator nodes are selected to be active, see the
 [whitepaper](https://www.nibirunet.io/whitepaper#3.5-features-of-the-mpos-consensus-mechanism).
 
-:::important Qualify to get NBN for staking!
+:::tip 
 
-We haven't launched the NBN token yet on exchanges. The first 100 validators to join the Nibiru 
-network will have their staking fees covered by us. For more information, join our 
-[**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram.
+The NBN token is not yet listed on Decentralized Exchanges (DEX).  For parties interested in bringing
+up a validator node on the Nibiru Network, your initial stake of 100 NBN will be covered by us. 
+For more information, join [**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram.
 
 :::
 

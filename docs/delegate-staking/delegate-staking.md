@@ -18,11 +18,11 @@ increasing the amount of liquidity staked into the network.
 
 Visit the [**Nibiru Network website**](https://www.nibirunet.io/staking) to learn more about staking.
 
-:::important Qualify to get NBN for delegate staking!
+:::tip 
 
-The NBN token has not yet been listed on exchanges. Join 
-[**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram for opportunities to qualify for
-NBN airdrops and details on future exchange listings.
+The NBN token is not yet listed on Decentralized Exchanges (DEX).  For parties interested in bringing
+up a validator node on the Nibiru Network, your initial stake of 100 NBN will be covered by us. 
+For more information, join [**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram.
 
 :::
 
