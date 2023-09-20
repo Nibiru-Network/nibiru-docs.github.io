@@ -11,7 +11,8 @@ const config = {
   favicon: 'img/favicon-32x32.ico',
 
   // Set the production url of your site here
-  url: 'https://nibiru-docs.github.io',
+  // url: 'https://nibiru-docs.github.io',
+  url: 'https://planetx-labs.github.io',
   // url: 'https://docs.nibirunet.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
@@ -20,7 +21,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Nibiru-Network', // Usually your GitHub org/user name.
+  //organizationName: 'Nibiru-Network', // Usually your GitHub org/user name.
+  organizationName: 'Nibiru-Network',
   projectName: 'Documentation', // Usually your repo name.
 
   onBrokenLinks: 'warn',
