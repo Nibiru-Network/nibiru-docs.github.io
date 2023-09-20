@@ -5,8 +5,8 @@ sidebar_position: 2
 Stake NBN in your validator
 ---
 
-Once you have the validator node set up complete, you must stake an initial pledge of 100 NBN 
-into your validator in order for it to become a candidate for block production.  The process 
+Once you have the validator node set up complete, you must stake an initial pledge a minimum of 100
+NBN into your validator in order for it to become a candidate for block production.  The process 
 for selection of Validator Nodes to become "active" is dependent on several factors, including 
 penalty scores as well as the amount of NBN staked into the validator. The more you stake, 
 the higher probability of being elected as an active validator to generate blocks and earn 
@@ -15,11 +15,11 @@ PoS block generation rewards.
 For details on how validator nodes are selected to be active, see the
 [whitepaper](https://www.nibirunet.io/whitepaper#3.5-features-of-the-mpos-consensus-mechanism).
 
-:::important Qualify to get NBN for staking!
+:::tip 
 
-We haven't launched the NBN token yet on exchanges. The first 100 validators to join the Nibiru 
-network will have their staking fees covered by us. For more information, join our 
-[**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram.
+The NBN token is not yet listed on Decentralized Exchanges (DEX).  For parties interested in bringing
+up a validator node on the Nibiru Network, your initial stake of 100 NBN will be covered by us. 
+For more information, join [**Nibiru Insiders**](https://t.me/nibiru_insider) on Telegram.
 
 :::
 
