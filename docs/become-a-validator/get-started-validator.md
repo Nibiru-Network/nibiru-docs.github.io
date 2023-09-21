@@ -4,7 +4,7 @@ sidebar_position: 1
 # Getting Started
 ---
 
-Proof of Stake (PoS) blockchains like the Nibiru Network rely on the service of validator nodes 
+Proof of Stake (PoS) blockchains like Nibiru Network rely on the service of validator nodes 
 to perform the important role of verifying and processing transactions, and generating new blocks 
 on the blockchain.  As validator nodes are crucial to the performance and security of the network, 
 liquidity is staked into the nodes in the form of NBN, which can be slashed in the event that the 
