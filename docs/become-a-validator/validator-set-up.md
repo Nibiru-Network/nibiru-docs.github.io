@@ -155,7 +155,7 @@ you may run the following command:
 systemctl status nbnchain
 ```
 
-### c. Check if node is synchronizing
+#### c. Check if node is synchronizing
 
 1. Enter the console
 ```bash
